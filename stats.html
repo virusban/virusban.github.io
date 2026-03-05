@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>ROM Stats</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Download Stats</h1>
+
+<div class="card">
+
+<h2 id="downloads">Loading...</h2>
+
+</div>
+
+<script>
+
+fetch("https://api.github.com/repos/YOURUSER/RonOS/releases")
+
+.then(r=>r.json())
+
+.then(data=>{
+
+let total=0
+
+data.forEach(rel=>{
+
+rel.assets.forEach(a=>{
+
+total+=a.download_count
+
+})
+
+})
+
+document.getElementById("downloads").innerText=total
+
+})
+
+</script>
+
+</body>
+</html>
