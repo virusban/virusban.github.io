@@ -1,0 +1,13 @@
+{
+ "response":[
+  {
+   "datetime":1710000000,
+   "filename":"RonOS-1.0-a52sxq.zip",
+   "id":"ronos1",
+   "romtype":"stable",
+   "size":1200000000,
+   "url":"https://github.com/virusban/RonOS/releases/download/v1.0/RonOS.zip",
+   "version":"1.0"
+  }
+ ]
+}
