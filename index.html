@@ -1,40 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RonOS Project</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>RonOS</title>
+
+<link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-    <header>
-        <h1>RonOS</h1>
-        <p>Custom Android ROM based on LineageOS</p>
-    </header>
 
-    <main>
-        <section class="info">
-            <h2>Version</h2>
-            <p>RonOS 1.0 – Android 14</p>
+<header>
 
-            <h2>Developer</h2>
-            <p>ron</p>
-        </section>
+<h1>RonOS</h1>
+<p>Clean • Fast • Custom Android ROM</p>
 
-        <section class="download">
-            <h2>Download</h2>
-            <a href="downloads/RonOS.zip" class="btn">Download RonOS</a>
-            <p>Bootanimation: <a href="downloads/bootanimation.zip">Download Bootanimation</a></p>
-        </section>
+<nav>
 
-        <section class="about">
-            <h2>About</h2>
-            <p>RonOS is a custom ROM with your personal branding. Replace default apps, boot animation, and system name with your own style.</p>
-        </section>
-    </main>
+<a href="index.html">Home</a>
+<a href="builds.html">Builds</a>
+<a href="stats.html">Stats</a>
+<a href="device-check.html">Device Check</a>
+<a href="ota.html">OTA</a>
 
-    <footer>
-        <p>&copy; 2026 ron | RonOS Project</p>
-    </footer>
+<button onclick="toggleTheme()">Theme</button>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<img src="images/android.svg" class="robot">
+
+<h2>RonOS 1.0</h2>
+
+<p>Based on Android 16</p>
+
+</section>
+
+
+<section>
+
+<h2>Screenshots</h2>
+
+<div class="slider">
+
+<img class="slide" src="images/screen1.png">
+<img class="slide" src="images/screen2.png">
+<img class="slide" src="images/screen3.png">
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Download</h2>
+
+<a class="btn" href="downloads/RonOS.zip">Download RonOS</a>
+
+<a class="btn" href="downloads/recovery.img">Download Recovery</a>
+
+</section>
+
+
+<section>
+
+<h2>Installation</h2>
+
+<div class="terminal">
+
+<p>$ adb reboot bootloader</p>
+
+<p>$ fastboot flash recovery recovery.img</p>
+
+<p>$ fastboot reboot recovery</p>
+
+<p>$ adb sideload RonOS.zip</p>
+
+</div>
+
+</section>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
