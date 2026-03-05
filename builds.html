@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>RonOS Builds</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>ROM Builds</h1>
+
+<div id="builds"></div>
+
+<script>
+
+fetch("https://api.github.com/repos/YOURUSER/RonOS/releases")
+
+.then(r=>r.json())
+
+.then(data=>{
+
+let html=""
+
+data.forEach(rel=>{
+
+html+=`
+<div class="card">
+
+<h2>${rel.tag_name}</h2>
+
+<p>${rel.name}</p>
+
+<a class="btn" href="${rel.assets[0].browser_download_url}">
+Download
+</a>
+
+</div>
+`
+
+})
+
+document.getElementById("builds").innerHTML=html
+
+})
+
+</script>
+
+</body>
+</html>
