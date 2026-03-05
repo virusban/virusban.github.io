@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>OTA Updates</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<h1>Latest Update</h1>
+
+<div id="update"></div>
+
+<script>
+
+fetch("ota.json")
+
+.then(r=>r.json())
+
+.then(data=>{
+
+let rom=data.response[0]
+
+document.getElementById("update").innerHTML=
+
+"<h2>"+rom.version+"</h2>"+
+
+"<p>"+rom.filename+"</p>"+
+
+"<a class='btn' href='"+rom.url+"'>Download</a>"
+
+})
+
+</script>
+
+</body>
+</html>
