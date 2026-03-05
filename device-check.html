@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Device Checker</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<h1>Device Compatibility</h1>
+
+<input id="device" placeholder="Enter device codename">
+
+<button onclick="check()">Check</button>
+
+<p id="result"></p>
+
+<script>
+
+const supported=[
+
+"a52sxq",
+"pixel5",
+"pixel6"
+
+]
+
+function check(){
+
+let d=document.getElementById("device").value.toLowerCase()
+
+if(supported.includes(d))
+
+document.getElementById("result").innerText="Supported!"
+
+else
+
+document.getElementById("result").innerText="Not supported"
+
+}
+
+</script>
+
+</body>
+</html>
